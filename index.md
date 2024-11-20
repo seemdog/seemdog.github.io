@@ -23,4 +23,4 @@ My core interest in AI lies in <b>LLMs</b>, especially in <b>evaluation</b> and 
   <li>Sangah Lee, Sungjoo Byun, <b>Jean Seo</b>, and Minha Kang. <a href="https://aclanthology.org/2024.lrec-main.961/">ManNER & ManPOS: Pioneering NLP for Endangered Manchu Language</a>, LREC-COLING 2024.</li>
   <li>Dongjun Jang, Sangah Lee, Sungjoo Byun, Jinwoong Kim, <b>Jean Seo</b>, Minseok Kim, Soyeon Kim, Chaeyoung
 Oh, Jaeyoon Kim, Hyemi Jo, Hyopil Shin, <a href="https://arxiv.org/abs/2311.13784">DaG LLM ver 1.0: Pioneering Instruction-Tuned Language Modeling for Korean NLP</a>, preprint.</li>
-<li><b>Jean Seo</b>, Sungjoo Byun, Minha Kang, Sangah Lee. <a href="https://aclanthology.org/2023.mrl-1.10/">Mergen: The First Manchu-Korean Machine Translation Model Trained on Augmented Data</a>, MRL EMNLP 2024.</li> </ol>
+<li><b>Jean Seo</b>, Sungjoo Byun, Minha Kang, Sangah Lee. <a href="https://aclanthology.org/2023.mrl-1.10/">Mergen: The First Manchu-Korean Machine Translation Model Trained on Augmented Data</a>, MRL EMNLP 2024.</li> 
