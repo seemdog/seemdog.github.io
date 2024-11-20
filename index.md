@@ -10,5 +10,5 @@ I recently obtained my MA in Computational Linguistics at Seoul National Univers
 </p>
 
 <p>
-My core interest in AI lies in <b>LLMs</b>, especially in <b>evaluation</b> and <b>low-resource language modeling</b>.
+My core interest in AI lies in <b>LLMs</b>, especially in <b>evaluation</b> and <b>low-resource language modeling</b>. Other than AI, I am mostly excited about start-ups.
 </p>
