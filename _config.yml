@@ -11,7 +11,7 @@ og_image: /assets/img/portfolio.jpg
 
 header:
   pages:
-    - name: Home
+    #- name: Home
       slug: /
     #- name: Work
     #- name: Blog
