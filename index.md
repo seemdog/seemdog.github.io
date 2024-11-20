@@ -6,9 +6,9 @@ profile_picture:
 ---
 
 <p>
-  Welcome! This site serves as an example for the Bay Jekyll theme. Bay is a very simple and minimal theme, directly inspired by Dan Grover's <a href="http://dangrover.com">website</a>.
+I recently obtained my MA in Computational Linguistics at Seoul National University, advised by Prof. Hyopil Shin. Before that, I obtained my BS in English Language & Literature and Psychology, micro-majoring Computer Programming at Yonsei University, Seoul.
 </p>
 
 <p>
-  You can find the source code and the instructions on <a href="https://github.com/eliottvincent/bay">GitHub</a>.
+My core interest in AI lies in <b>LLMs</b>, especially in <b>evaluation</b> and <b>low-resource language modeling</b>.
 </p>
