@@ -34,6 +34,9 @@ footer:
     - type: huggingface
       name: HuggingFace
       link: https://huggingface.co/seemdog
+    - type: googlescholar
+      name: GoogleScholar
+      link: https://scholar.google.com/citations?hl=ko&user=JviUsPcAAAAJ
 
 # Build settings
 markdown: kramdown
