@@ -6,7 +6,7 @@ profile_picture:
 ---
 
 <p>
-I recently obtained my MA in Computational Linguistics at Seoul National University, advised by Prof. Hyopil Shin. Before that, I obtained my BS in English Language & Literature and Psychology, micro-majoring Computer Programming at Yonsei University, Seoul.
+I recently obtained my MA in Computational Linguistics at Seoul National University, advised by Prof. Hyopil Shin. Before that, I obtained my BA in English Language & Literature and Psychology, micro-majoring Computer Programming at Yonsei University, Seoul.
 </p>
 
 <p>
