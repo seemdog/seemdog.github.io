@@ -20,7 +20,7 @@ footer:
   show_powered_by: false
   contact:
     - type: email
-      name: Email
+      name: seemdog@snu.ac.kr
       value: seemdog@snu.ac.kr
     
   follow:
