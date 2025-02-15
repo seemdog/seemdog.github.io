@@ -6,12 +6,22 @@ profile_picture:
 ---
 
 <p>
-I recently obtained my MA in Computational Linguistics at Seoul National University, advised by Prof. Hyopil Shin. Before that, I obtained my BA in English Language & Literature and Psychology, micro-majoring Computer Programming at Yonsei University, Seoul.
+Currently I am a NLP engineer at <a href="https://aitrics.com/kr/">AITRICS</a>. I obtained my MA in Computational Linguistics at Seoul National University, advised by Prof. Hyopil Shin. Before that, I obtained my BA in English Language & Literature and Psychology, micro-majoring Computer Programming at Yonsei University, Seoul.
 </p>
 
 <p>
-My core interest in AI lies in <b>LLMs</b>, especially in <b>evaluation</b> and <b>low-resource language modeling</b>. Other than AI, I am mostly excited about start-ups.
+My core interest in AI lies in <b>LLMs</b>, especially in its <b>evaluation</b>, and <b>low-resource language modeling(be it data or hardware)</b>. Other than AI, I am mostly excited about start-ups.
 </p>
+
+<h3>News</h3>
+
+
+<ol>
+  Paper <b>MoFE: Mixture of Frozen Experts Architecture</b> accepted to NAACL2025 Industry track.
+</ol>
+<ol>
+  <li>Honored to take <a href="https://ctai.snu.ac.kr/en/?c=27&s=&gp=1&gbn=viewok&ix=175>"3rd place</a> <a href="https://www.imda.gov.sg/business">[IMDA]</a> Singapore AI Safety Red Teaming Challenge as team Korea🇰🇷.</li>
+</ol>
 
 
 <h3>Selected Papers</h3>
