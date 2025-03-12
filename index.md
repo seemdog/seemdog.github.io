@@ -17,7 +17,7 @@ My core interest in AI lies in <b>LLMs</b>, especially in its <b>evaluation</b>,
 
 
 <ol>
-  <li>Paper <b><a href = "https://arxiv.org/pdf/2503.06491">MoFE: Mixture of Frozen Experts Architecture</a></b> accepted to NAACL 2025 Industry track.</li>
+  <li>Paper <a href = "https://arxiv.org/pdf/2503.06491">MoFE: Mixture of Frozen Experts Architecture</a> accepted to NAACL 2025 Industry track.</li>
 
 
   <li>Won <a href="https://ctai.snu.ac.kr/en/?c=27&s=&gp=1&gbn=viewok&ix=175">3rd place</a> at <a href="https://www.imda.gov.sg/business">[IMDA]</a> Singapore AI Safety Red Teaming Challenge as team Korea🇰🇷.</li>
