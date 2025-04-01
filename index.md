@@ -10,7 +10,7 @@ Currently working as a NLP engineer at <a href="https://aitrics.com/en/">AITRICS
 </p>
 
 <p>
-My core interest in AI lies in <b>LLMs</b>, especially in its <b>evaluation</b>, <b>domain-specific fine-tuning(ex. medicine, law, finance)</b>, and <b>training in low-resource scenarios(data&hardware)</b>. Other than AI, I am mostly excited about start-ups.
+My core interest in AI lies in <b>LLMs and VLMs</b>, especially in their <b>evaluation</b>, <b>domain-specific fine-tuning(ex. medicine, law, finance)</b>, and <b>training in low-resource scenarios</b>. Other than AI, I am mostly excited about start-ups.
 </p>
 
 <h3>News</h3>
