@@ -6,7 +6,7 @@ profile_picture:
 ---
 
 <p>
-Currently working as a NLP engineer at <a href="https://aitrics.com/en/">AITRICS</a>. I obtained my MA in Computational Linguistics at Seoul National University, advised by Prof. Hyopil Shin. Before that, I obtained my BA in English Language & Literature and Psychology at Yonsei University, Seoul.
+Currently working as a AI researcher at <a href="https://aitrics.com/en/">AITRICS</a>. I obtained my MA in Computational Linguistics at Seoul National University, advised by Prof. Hyopil Shin. Before that, I obtained my BA in English Language & Literature and Psychology at Yonsei University, Seoul.
 </p>
 
 <p>
