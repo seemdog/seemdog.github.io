@@ -17,9 +17,8 @@ My core interest in AI lies in <b>LLMs and multi-modal models</b>, especially in
 
 
 <ol>
-  <li>Paper <a href = "https://arxiv.org/pdf/2503.06491">MoFE: Mixture of Frozen Experts Architecture</a> accepted to NAACL 2025 Industry track.</li>
 
-  <li>Paper <b>Korean Medical Preference Dataset for Alignment Tuning</b> accepted to Healthcare Informatics Research (Scopus).</li>
+  <li>Paper <b><a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003200872">Korean Medical Preference Dataset for Alignment Tuning</b></a> accepted to Healthcare Informatics Research.</li>
 
 
   <li>Won <a href="https://ctai.snu.ac.kr/en/?c=27&s=&gp=1&gbn=viewok&ix=175">3rd place</a> at <a href="https://www.imda.gov.sg/business">[IMDA]</a> Singapore AI Safety Red Teaming Challenge as team Korea🇰🇷.</li>
@@ -29,6 +28,7 @@ My core interest in AI lies in <b>LLMs and multi-modal models</b>, especially in
 <h3>Selected Papers</h3>
 
 <ol>
+  <li><b>Jean Seo</b>, Jaeyoon Kim, Hyopil Shin. <a href="https://aclanthology.org/2025.naacl-industry.28/">MoFE: Mixture of Frozen Experts Architecture</a>, NAACL Industry 2025.</li>
   <li><b>Jean Seo</b>, Jongwon Lim, Dongjun Jang, Hyopil Shin. <a href="https://arxiv.org/abs/2411.09255">DAHL: Domain-specific Automated Hallucination Evaluation of Long-Form Text through a Benchmark Dataset in Biomedicine</a>, FEVER EMNLP 2024.</li>
   <li><b>Jean Seo</b>, Minha Kang, SungJoo Byun, Sangah Lee. <a href="https://aclanthology.org/2024.fieldmatters-1.2/">ManWav: The First Manchu ASR Model</a>, Field Matters ACL 2024.</li>
   <li>Sungjoo Byun, Jiseung Hong, Sumin Park, Dongjun Jang, <b>Jean Seo</b>, Minseok Kim, Chaeyoung Oh, Hyopil Shin. <a href="https://aclanthology.org/2024.lrec-main.868/">Korean Bio-Medical Corpus (KBMC) for Medical Named Entity Recognition</a>, LREC-COLING 2024.</li>
