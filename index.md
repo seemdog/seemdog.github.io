@@ -18,7 +18,7 @@ My core interest in AI lies in <b>LLMs and multi-modal models</b>, especially in
 
 <ol>
 
-  <li>Paper <b><a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003200872"Advancing Korean Medical Large Language Models: Automated Pipeline for Korean Medical Preference Dataset Construction"</b></a> accepted to Healthcare Informatics Research.</li>
+  <li>Paper <b><a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003200872">Advancing Korean Medical Large Language Models: Automated Pipeline for Korean Medical Preference Dataset Construction</a></b> accepted to Healthcare Informatics Research.</li>
 
 
   <li>Won <a href="https://ctai.snu.ac.kr/en/?c=27&s=&gp=1&gbn=viewok&ix=175">3rd place</a> at <a href="https://www.imda.gov.sg/business">[IMDA]</a> Singapore AI Safety Red Teaming Challenge as team Korea🇰🇷.</li>
