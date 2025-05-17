@@ -18,16 +18,19 @@ My core interest in AI lies in <b>LLMs and multi-modal models</b>, especially in
 
 <ol>
 
-  <li>Paper <b><a href="https://e-hir.org/journal/view.php?number=1248">Advancing Korean Medical Large Language Models: Automated Pipeline for Korean Medical Preference Dataset Construction</a></b> accepted to Healthcare Informatics Research.</li>
-
-
   <li>Won <a href="https://ctai.snu.ac.kr/en/?c=27&s=&gp=1&gbn=viewok&ix=175">3rd place</a> at <a href="https://www.imda.gov.sg/business">[IMDA]</a> Singapore AI Safety Red Teaming Challenge as team Korea🇰🇷.</li>
   </ol>
 
+<h3>Working Papers</h3>
+<ol>
+  <li>Evaluating the Pre-Consultation Ability of LLMs using Diagnostic Guidelines</li>
+  <li>Evaluating ASR in Multilingual Medical Contexts: A Novel Metric for Code-Switching Settings</li>
+</ol>
 
 <h3>Selected Papers</h3>
 
 <ol>
+  <li><b>Jean Seo</b>, Sumin Park, Sungjoo Byun, Jinwook Choi, Jinho Choi, Hyopil Shin. <a href="https://e-hir.org/journal/view.php?number=1248">Advancing Korean Medical Large Language Models: Automated Pipeline for Korean Medical Preference Dataset Construction</a>, Healthcare Informatics Research.</li>
   <li><b>Jean Seo</b>, Jaeyoon Kim, Hyopil Shin. <a href="https://aclanthology.org/2025.naacl-industry.28/">MoFE: Mixture of Frozen Experts Architecture</a>, NAACL Industry 2025.</li>
   <li><b>Jean Seo</b>, Jongwon Lim, Dongjun Jang, Hyopil Shin. <a href="https://arxiv.org/abs/2411.09255">DAHL: Domain-specific Automated Hallucination Evaluation of Long-Form Text through a Benchmark Dataset in Biomedicine</a>, FEVER EMNLP 2024.</li>
   <li><b>Jean Seo</b>, Minha Kang, SungJoo Byun, Sangah Lee. <a href="https://aclanthology.org/2024.fieldmatters-1.2/">ManWav: The First Manchu ASR Model</a>, Field Matters ACL 2024.</li>
