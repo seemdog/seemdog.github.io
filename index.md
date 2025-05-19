@@ -33,10 +33,10 @@ My core interest in AI lies in <b>LLMs and multi-modal models</b>, especially in
   <li><b>Jean Seo</b>, Sumin Park, Sungjoo Byun, Jinwook Choi, Jinho Choi, Hyopil Shin. <a href="https://e-hir.org/journal/view.php?number=1248">Advancing Korean Medical Large Language Models: Automated Pipeline for Korean Medical Preference Dataset Construction</a>, Healthcare Informatics Research.</li>
   <li><b>Jean Seo</b>, Jaeyoon Kim, Hyopil Shin. <a href="https://aclanthology.org/2025.naacl-industry.28/">MoFE: Mixture of Frozen Experts Architecture</a>, NAACL Industry 2025.</li>
   <li><b>Jean Seo</b>, Jongwon Lim, Dongjun Jang, Hyopil Shin. <a href="https://arxiv.org/abs/2411.09255">DAHL: Domain-specific Automated Hallucination Evaluation of Long-Form Text through a Benchmark Dataset in Biomedicine</a>, FEVER EMNLP 2024.</li>
-  <li><b>Jean Seo</b>, Jaeyoon Kim, SungJoo Byun, Hyopil Shin. <a href="https://arxiv.org/pdf/2502.12560?">How does a Language-Specific Tokenizer affect LLMs?</a>, preprint.</li>
+  <li><b>Jean Seo</b>, Jaeyoon Kim, SungJoo Byun, Hyopil Shin. <a href="https://arxiv.org/pdf/2502.12560?">How does a Language-Specific Tokenizer affect LLMs?</a>, arXiv.</li>
   <li><b>Jean Seo</b>, Minha Kang, SungJoo Byun, Sangah Lee. <a href="https://aclanthology.org/2024.fieldmatters-1.2/">ManWav: The First Manchu ASR Model</a>, Field Matters ACL 2024.</li>
   <li>Sungjoo Byun, Jiseung Hong, Sumin Park, Dongjun Jang, <b>Jean Seo</b>, Minseok Kim, Chaeyoung Oh, Hyopil Shin. <a href="https://aclanthology.org/2024.lrec-main.868/">Korean Bio-Medical Corpus (KBMC) for Medical Named Entity Recognition</a>, LREC-COLING 2024.</li>
   <li>Sangah Lee, Sungjoo Byun, <b>Jean Seo</b>, and Minha Kang. <a href="https://aclanthology.org/2024.lrec-main.961/">ManNER & ManPOS: Pioneering NLP for Endangered Manchu Language</a>, LREC-COLING 2024.</li>
   <li>Dongjun Jang, Sangah Lee, Sungjoo Byun, Jinwoong Kim, <b>Jean Seo</b>, Minseok Kim, Soyeon Kim, Chaeyoung
-Oh, Jaeyoon Kim, Hyemi Jo, Hyopil Shin, <a href="https://arxiv.org/abs/2311.13784">DaG LLM ver 1.0: Pioneering Instruction-Tuned Language Modeling for Korean NLP</a>, preprint.</li>
+Oh, Jaeyoon Kim, Hyemi Jo, Hyopil Shin, <a href="https://arxiv.org/abs/2311.13784">DaG LLM ver 1.0: Pioneering Instruction-Tuned Language Modeling for Korean NLP</a>, arXiv.</li>
 <li><b>Jean Seo</b>, Sungjoo Byun, Minha Kang, Sangah Lee. <a href="https://aclanthology.org/2023.mrl-1.10/">Mergen: The First Manchu-Korean Machine Translation Model Trained on Augmented Data</a>, MRL EMNLP 2024.</li> 
