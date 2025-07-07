@@ -24,8 +24,9 @@ My core interest in AI lies in <b>LLMs and multi-modal models</b>, especially in
 <h3>Working Papers</h3>
 <ol>
   <li>Evaluating the Pre-Consultation Ability of LLMs using Diagnostic Guidelines</li>
+  <li>Taxonomy of Comprehensive Safety for Clinical Agents</li>
+  <li>Format Inertia: A Failure Mechanism of LLMs in Medical Pre-Consultation</li>
   <li>Evaluating ASR in Multilingual Medical Contexts: A Novel Metric for Code-Switching Settings</li>
-  <li>Guardrail for Clinical Chatbot</li>
 </ol>
 
 <h3>Selected Papers</h3>
