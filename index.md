@@ -26,7 +26,7 @@ My core interest in AI lies in <b>LLMs and LMMs</b>, especially in <b>healthcare
   <li>Evaluating the Pre-Consultation Ability of LLMs using Diagnostic Guidelines</li>
   <li>Taxonomy of Comprehensive Safety for Clinical Agents</li>
   <li>Format Inertia: A Failure Mechanism of LLMs in Medical Pre-Consultation</li>
-  <li>Evaluating ASR in Code-switching Medical Contexts</li>
+  <li>Evaluating ASR in Medical Code-switching Contexts</li>
 </ol>
 
 <h3>Selected Papers</h3>
