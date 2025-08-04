@@ -10,7 +10,7 @@ Currently working as an AI researcher at <a href="https://aitrics.com/en/">AITRI
 </p>
 
 <p>
-My core interest in AI lies in <b>LLMs and multi-modal models</b>, especially in <b>healthcare</b> and their <b>evaluation</b>, <b>training in low-resource scenarios</b>. Other than AI, I am mostly excited about start-ups.
+My core interest in AI lies in <b>LLMs and LMMs</b>, especially in <b>healthcare</b> and their <b>evaluation</b>, <b>training in low-resource scenarios</b>. Other than AI, I am mostly excited about start-ups.
 </p>
 
 <h3>News</h3>
@@ -26,7 +26,7 @@ My core interest in AI lies in <b>LLMs and multi-modal models</b>, especially in
   <li>Evaluating the Pre-Consultation Ability of LLMs using Diagnostic Guidelines</li>
   <li>Taxonomy of Comprehensive Safety for Clinical Agents</li>
   <li>Format Inertia: A Failure Mechanism of LLMs in Medical Pre-Consultation</li>
-  <li>Evaluating ASR in Multilingual Medical Contexts: A Novel Metric for Code-Switching Settings</li>
+  <li>Evaluating ASR in Code-switching Medical Contexts</li>
 </ol>
 
 <h3>Selected Papers</h3>
