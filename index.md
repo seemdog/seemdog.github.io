@@ -19,15 +19,14 @@ My core interest in AI lies in <b>LLMs and LMMs</b>, especially in <b>healthcare
 <ol>
 
   <li>Won <a href="https://ctai.snu.ac.kr/en/?c=27&s=&gp=1&gbn=viewok&ix=175">3rd place</a> at <a href="https://www.imda.gov.sg/business">[IMDA]</a> Singapore AI Safety Red Teaming Challenge as team Korea🇰🇷.</li>
-    <li><b>Jean Seo</b>, Hyunkyung Lee, Gibaeg Kim, Wooseok Han, Jaehyo Yoo, Seungseop Lim, Kihun Shin, Eunho Yang. Taxonomy of Comprehensive Safety for Clinical Agents. accepted to EMNLP 2025 Industry Track.
-  </li>
+    <li><b>Jean Seo</b>, Hyunkyung Lee, Gibaeg Kim, Wooseok Han, Jaehyo Yoo, Seungseop Lim, Kihun Shin, Eunho Yang. Taxonomy of Comprehensive Safety for Clinical Agents. accepted to EMNLP 2025 Industry Track.</li>
   <li>Seungseop Lim, Gibaeg Kim, Wooseok Han, <b>Jean Seo</b>, Hyunkyung Lee, Jaehyo Yoo, Eunho Yang. Format Inertia: A Failure Mechanism of LLMs in Medical Pre-Consultation. accepted to EMNLP 2025 Industry Track.</li>
+  <li>Seungseop Lim, Gibaeg Kim, Hyunkyung Lee, Wooseok Han, Jean Seo, Jaehyo Yoo, Eunho Yang. H-DDx: A Hierarchical Evaluation Framework for Differential Diagnosis. accepted to Neurips 2025 Workshop on GenAI for Health. (Award Candidate)</li>
   </ol>
 
 <h3>Working Papers</h3>
 <ol>
   <li>Evaluating the Pre-Consultation Ability of LLMs using Diagnostic Guidelines</li>
-  <li>H-DDx: A Hierarchical Evaluation Framework for Differential Diagnosis</li>
   <li>Towards Fair and Flexible Evaluation in Korean Clinical ASR</li>
 </ol>
 
