@@ -19,8 +19,6 @@ My core interest in AI lies in <b>LLMs and LMMs</b>, especially in <b>healthcare
 <ol>
 
   <li>Won <a href="https://ctai.snu.ac.kr/en/?c=27&s=&gp=1&gbn=viewok&ix=175">3rd place</a> at <a href="https://www.imda.gov.sg/business">[IMDA]</a> Singapore AI Safety Red Teaming Challenge as team Korea🇰🇷.</li>
-    <li><b>Jean Seo</b>, Hyunkyung Lee, Gibaeg Kim, Wooseok Han, Jaehyo Yoo, Seungseop Lim, Kihun Shin, Eunho Yang. <a href = "https://arxiv.org/abs/2509.22041">Taxonomy of Comprehensive Safety for Clinical Agents</a>, accepted to EMNLP 2025 Industry Track.</li>
-  <li>Seungseop Lim, Gibaeg Kim, Wooseok Han, <b>Jean Seo</b>, Hyunkyung Lee, Jaehyo Yoo, Eunho Yang. <a href="https://arxiv.org/pdf/2510.01688">Format Inertia: A Failure Mechanism of LLMs in Medical Pre-Consultation</a>, accepted to EMNLP 2025 Industry Track.</li>
   <li>Seungseop Lim, Gibaeg Kim, Hyunkyung Lee, Wooseok Han, <b>Jean Seo</b>, Jaehyo Yoo, Eunho Yang. <a href="https://arxiv.org/pdf/2510.03700">H-DDx: A Hierarchical Evaluation Framework for Differential Diagnosis</a>, accepted to NeurIPS 2025 Workshop on GenAI for Health. (Award Candidate)</li>
   </ol>
 
@@ -33,7 +31,8 @@ My core interest in AI lies in <b>LLMs and LMMs</b>, especially in <b>healthcare
 <h3>Selected Papers</h3>
 
 <ol>
-
+  <li><b>Jean Seo</b>, Hyunkyung Lee, Gibaeg Kim, Wooseok Han, Jaehyo Yoo, Seungseop Lim, Kihun Shin, Eunho Yang. <a href = "[https://arxiv.org/abs/2509.22041](https://aclanthology.org/2025.emnlp-industry.124/)">Taxonomy of Comprehensive Safety for Clinical Agents</a>, accepted to EMNLP 2025 Industry Track.</li>
+    <li>Seungseop Lim, Gibaeg Kim, Wooseok Han, <b>Jean Seo</b>, Hyunkyung Lee, Jaehyo Yoo, Eunho Yang. <a href="[https://arxiv.org/pdf/2510.01688](https://aclanthology.org/2025.emnlp-industry.101/)">Format Inertia: A Failure Mechanism of LLMs in Medical Pre-Consultation</a>, accepted to EMNLP 2025 Industry Track.</li>
   <li><b>Jean Seo</b>, Sumin Park, Sungjoo Byun, Jinwook Choi, Jinho Choi, Hyopil Shin. <a href="https://e-hir.org/journal/view.php?number=1248">Advancing Korean Medical Large Language Models: Automated Pipeline for Korean Medical Preference Dataset Construction</a>, Healthcare Informatics Research.</li>
   <li><b>Jean Seo</b>, Jaeyoon Kim, Hyopil Shin. <a href="https://aclanthology.org/2025.naacl-industry.28/">MoFE: Mixture of Frozen Experts Architecture</a>, NAACL Industry 2025.</li>
   <li><b>Jean Seo</b>, Jongwon Lim, Dongjun Jang, Hyopil Shin. <a href="https://arxiv.org/abs/2411.09255">DAHL: Domain-specific Automated Hallucination Evaluation of Long-Form Text through a Benchmark Dataset in Biomedicine</a>, FEVER EMNLP 2024.</li>
