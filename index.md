@@ -18,13 +18,14 @@ My core interest in AI lies in <b>LLMs and LMMs</b>, especially in <b>healthcare
 
 <ol>
 
+  <li><b>Jean Seo</b>, Gibaeg Kim, Kihun Shin, Seungseop Lim, Hyunkyung Lee, Wooseok Han, Jongwon Lee, Eunho Yang. Evaluating the Pre-Consultation Ability of LLMs using Diagnostic Guidelines. accepted to EACL 2026 Industry Track.</li>
   <li>Won <a href="https://ctai.snu.ac.kr/en/?c=27&s=&gp=1&gbn=viewok&ix=175">3rd place</a> at <a href="https://www.imda.gov.sg/business">[IMDA]</a> Singapore AI Safety Red Teaming Challenge as team Korea🇰🇷.</li>
-  <li>Seungseop Lim, Gibaeg Kim, Hyunkyung Lee, Wooseok Han, <b>Jean Seo</b>, Jaehyo Yoo, Eunho Yang. <a href="https://arxiv.org/pdf/2510.03700">H-DDx: A Hierarchical Evaluation Framework for Differential Diagnosis</a>, accepted to NeurIPS 2025 Workshop on GenAI for Health. (Award Candidate)</li>
+  
   </ol>
 
 <h3>Working Papers</h3>
 <ol>
-  <li>Evaluating the Pre-Consultation Ability of LLMs using Diagnostic Guidelines</li>
+  <li>Multilingual Benchmark for Multiscript ASR Evaluation</li>
 </ol>
 
 <h3>Selected Papers</h3>
