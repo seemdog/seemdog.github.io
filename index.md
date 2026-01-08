@@ -18,7 +18,7 @@ My core interest in AI lies in <b>LLMs and LMMs</b>, especially in <b>healthcare
 
 <ol>
 
-  <li><b>Jean Seo</b>, Gibaeg Kim, Kihun Shin, Seungseop Lim, Hyunkyung Lee, Wooseok Han, Jongwon Lee, Eunho Yang. Evaluating the Pre-Consultation Ability of LLMs using Diagnostic Guidelines. accepted to EACL 2026 Industry Track.</li>
+  <li><b>Jean Seo</b>, Gibaeg Kim, Kihun Shin, Seungseop Lim, Hyunkyung Lee, Wooseok Han, Jongwon Lee, Eunho Yang. <a href="https://arxiv.org/abs/2601.03627">Evaluating the Pre-Consultation Ability of LLMs using Diagnostic Guidelines</a>, accepted to EACL 2026 Industry Track.</li>
   <li>Won <a href="https://ctai.snu.ac.kr/en/?c=27&s=&gp=1&gbn=viewok&ix=175">3rd place</a> at <a href="https://www.imda.gov.sg/business">[IMDA]</a> Singapore AI Safety Red Teaming Challenge as team Korea🇰🇷.</li>
   
   </ol>
