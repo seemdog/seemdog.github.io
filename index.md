@@ -6,7 +6,7 @@ profile_picture:
 ---
 
 <p>
-I am currently a PhD Student at <a href="https://www.copenlu.com/">CopeNLU</a>, Department of Computer Science, University of Copenhagen, advised by Prof. <a href = "https://isabelleaugenstein.github.io/">Isabelle Augenstein</a>. Before that, I obtained my MA in Computational Linguistics at Seoul National University, advised by Prof. <a href="https://knlp.snu.ac.kr/">Hyopil Shin</a>, BA in English Language & Literature and Psychology at Yonsei University, Seoul.
+I am currently a PhD student at <a href="https://www.copenlu.com/">CopeNLU</a>, Department of Computer Science, University of Copenhagen, advised by Prof. <a href = "https://isabelleaugenstein.github.io/">Isabelle Augenstein</a>. Before that, I obtained my MA in Computational Linguistics at Seoul National University, advised by Prof. <a href="https://knlp.snu.ac.kr/">Hyopil Shin</a>, BA in English Language & Literature and Psychology at Yonsei University, Seoul.
 </p>
 
 <p>
