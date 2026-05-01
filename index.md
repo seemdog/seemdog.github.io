@@ -6,7 +6,7 @@ profile_picture:
 ---
 
 <p>
-Currently working as an AI researcher at <a href="https://aitrics.com/en/">AITRICS</a>. I obtained my MA in Computational Linguistics at Seoul National University, advised by Prof. <a href="https://knlp.snu.ac.kr/">Hyopil Shin</a>. Before that, I obtained my BA in English Language & Literature and Psychology at Yonsei University, Seoul.
+I am currently a PhD Student at <a href="https://www.copenlu.com/">CopeNLU</a>, Department of Computer Science, University of Copenhagen, advised by Prof. <a href = "https://isabelleaugenstein.github.io/">Isabelle Augenstein</a>. Before that, I obtained my MA in Computational Linguistics at Seoul National University, advised by Prof. <a href="https://knlp.snu.ac.kr/">Hyopil Shin</a>, BA in English Language & Literature and Psychology at Yonsei University, Seoul.
 </p>
 
 <p>
@@ -18,19 +18,20 @@ My core interest in AI lies in <b>LLMs and LMMs</b>, especially in <b>healthcare
 
 <ol>
 
-  <li><b>Jean Seo</b>, Gibaeg Kim, Kihun Shin, Seungseop Lim, Hyunkyung Lee, Wooseok Han, Jongwon Lee, Eunho Yang. <a href="https://arxiv.org/abs/2601.03627">Evaluating the Pre-Consultation Ability of LLMs using Diagnostic Guidelines</a>, accepted to EACL 2026 Industry Track.</li>
   <li>Won <a href="https://ctai.snu.ac.kr/en/?c=27&s=&gp=1&gbn=viewok&ix=175">3rd place</a> at <a href="https://www.imda.gov.sg/business">[IMDA]</a> Singapore AI Safety Red Teaming Challenge as team Korea🇰🇷.</li>
   
   </ol>
 
 <h3>Working Papers</h3>
 <ol>
-  <li>Multilingual Benchmark for Multiscript ASR Evaluation</li>
+  <li>When Multiple Script Matters: Evaluating ASR in Clinical Settings</li>
 </ol>
 
 <h3>Selected Papers</h3>
 
 <ol>
+  <li><b>Jean Seo</b>, Gibaeg Kim, Kihun Shin, Seungseop Lim, Hyunkyung Lee, Wooseok Han, Jongwon Lee, Eunho Yang. <a href="https://arxiv.org/abs/2601.03627">Evaluating the Pre-Consultation Ability of LLMs using Diagnostic Guidelines</a>, EACL 2026 Industry Track.
+  </li>
   <li><b>Jean Seo</b>, Hyunkyung Lee, Gibaeg Kim, Wooseok Han, Jaehyo Yoo, Seungseop Lim, Kihun Shin, Eunho Yang. <a href = "https://aclanthology.org/2025.emnlp-industry.124/">Taxonomy of Comprehensive Safety for Clinical Agents</a>, EMNLP 2025 Industry Track.</li>
     <li>Seungseop Lim, Gibaeg Kim, Wooseok Han, <b>Jean Seo</b>, Hyunkyung Lee, Jaehyo Yoo, Eunho Yang. <a href="https://aclanthology.org/2025.emnlp-industry.101/">Format Inertia: A Failure Mechanism of LLMs in Medical Pre-Consultation</a>, EMNLP 2025 Industry Track.</li>
   <li><b>Jean Seo</b>, Sumin Park, Sungjoo Byun, Jinwook Choi, Jinho Choi, Hyopil Shin. <a href="https://e-hir.org/journal/view.php?number=1248">Advancing Korean Medical Large Language Models: Automated Pipeline for Korean Medical Preference Dataset Construction</a>, Healthcare Informatics Research.</li>
