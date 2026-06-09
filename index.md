@@ -17,15 +17,16 @@ My core interest in AI lies in <b>LLMs and LMMs</b>, especially in <b>healthcare
 
 
 <ol>
+<li>When Multiple Script Matters: Evaluating ASR in Clinical Settings accepted to Interspeech 2026.</li>
 
   <li>Won <a href="https://ctai.snu.ac.kr/en/?c=27&s=&gp=1&gbn=viewok&ix=175">3rd place</a> at <a href="https://www.imda.gov.sg/business">[IMDA]</a> Singapore AI Safety Red Teaming Challenge as team Korea🇰🇷.</li>
   
   </ol>
 
-<h3>Working Papers</h3>
+<!-- <h3>Working Papers</h3>
 <ol>
   <li>When Multiple Script Matters: Evaluating ASR in Clinical Settings</li>
-</ol>
+</ol> -->
 
 <h3>Selected Papers</h3>
 
