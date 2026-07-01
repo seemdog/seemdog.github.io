@@ -10,7 +10,7 @@ I am currently a PhD student at <a href="https://www.copenlu.com/">CopeNLU</a>, 
 </p>
 
 <p>
-My core interest in AI lies in <b>LLMs and LMMs</b>, especially in <b>healthcare</b> and their <b>evaluation</b>, <b>training in low-resource scenarios</b>. Other than AI, I am mostly excited about start-ups.
+My core interest in AI lies in <b>LLMs</b>, especially in <b>healthcare</b> and their <b>evaluation</b>, <b>training in low-resource scenarios</b>. Other than AI, I am mostly excited about start-ups.
 </p>
 
 <h3>News</h3>
