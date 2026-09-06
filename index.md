@@ -6,7 +6,7 @@ profile_picture:
 ---
 
 <p>
-I am currently a PhD student at <a href="https://www.copenlu.com/">CopeNLU</a>, Department of Computer Science, University of Copenhagen, advised by Prof. <a href = "https://isabelleaugenstein.github.io/">Isabelle Augenstein</a> and co-advised by Prof. <a href = "https://apepa.github.io/">Pepa Atanasova</a>. Before that, I obtained my MA in Computational Linguistics at Seoul National University, advised by Prof. <a href="https://knlp.snu.ac.kr/">Hyopil Shin</a>, BA in English Language & Literature and Psychology at Yonsei University, Seoul.
+I am a first-year PhD student at <a href="https://www.copenlu.com/">CopeNLU</a>, Department of Computer Science, University of Copenhagen, advised by Prof. <a href = "https://isabelleaugenstein.github.io/">Isabelle Augenstein</a> and co-advised by Prof. <a href = "https://apepa.github.io/">Pepa Atanasova</a>. Before that, I obtained my MA in Computational Linguistics at Seoul National University, advised by Prof. <a href="https://knlp.snu.ac.kr/">Hyopil Shin</a>, BA in English Language & Literature and Psychology at Yonsei University, Seoul.
 </p>
 
 <p>
@@ -17,7 +17,7 @@ My core interest in AI lies in <b>LLMs</b>, especially in <b>healthcare</b> and 
 
 
 <ol>
-<li><a href = "https://arxiv.org/abs/2606.17826">When Multiple Script Matters: Evaluating ASR in Clinical Settings</a> accepted to Interspeech 2026.</li>
+<li><a href = "https://arxiv.org/abs/2606.17826">When Multiple Script Matters: Evaluating ASR in Clinical Settings</a> accepted to Interspeech 2026 (oral).</li>
 
   <li>Won <a href="https://ctai.snu.ac.kr/en/?c=27&s=&gp=1&gbn=viewok&ix=175">3rd place</a> at <a href="https://www.imda.gov.sg/business">[IMDA]</a> Singapore AI Safety Red Teaming Challenge as team Korea🇰🇷.</li>
   
