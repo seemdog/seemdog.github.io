@@ -17,7 +17,7 @@ My core interest in AI lies in <b>LLMs</b>, especially in <b>healthcare</b> and 
 
 
 <ol>
-<li><a href = "https://arxiv.org/abs/2606.17826">When Multiple Script Matters: Evaluating ASR in Clinical Settings</a> accepted to Interspeech 2026 (oral).</li>
+
 
   <li>Won <a href="https://ctai.snu.ac.kr/en/?c=27&s=&gp=1&gbn=viewok&ix=175">3rd place</a> at <a href="https://www.imda.gov.sg/business">[IMDA]</a> Singapore AI Safety Red Teaming Challenge as team Korea🇰🇷.</li>
   
@@ -25,12 +25,13 @@ My core interest in AI lies in <b>LLMs</b>, especially in <b>healthcare</b> and 
 
 <!-- <h3>Working Papers</h3>
 <ol>
-  <li>When Multiple Script Matters: Evaluating ASR in Clinical Settings</li>
+  <li>Claim Framing as a Driver of Sycophancy</li>
 </ol> -->
 
 <h3>Selected Papers</h3>
 
 <ol>
+  <li><a href = "https://arxiv.org/abs/2606.17826">When Multiple Script Matters: Evaluating ASR in Clinical Settings</a> Interspeech 2026 (Oral).</li>
   <li><b>Jean Seo</b>, Gibaeg Kim, Kihun Shin, Seungseop Lim, Hyunkyung Lee, Wooseok Han, Jongwon Lee, Eunho Yang. <a href="https://arxiv.org/abs/2601.03627">Evaluating the Pre-Consultation Ability of LLMs using Diagnostic Guidelines</a>, EACL 2026 Industry Track.
   </li>
   <li><b>Jean Seo</b>, Hyunkyung Lee, Gibaeg Kim, Wooseok Han, Jaehyo Yoo, Seungseop Lim, Kihun Shin, Eunho Yang. <a href = "https://aclanthology.org/2025.emnlp-industry.124/">Taxonomy of Comprehensive Safety for Clinical Agents</a>, EMNLP 2025 Industry Track.</li>
