@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Your Name</title>
-<meta name="description" content="Personal homepage — NLP / LLM research">
+<title>Jean Seo</title>
+<meta name="description" content="Jean Seo — PhD student at CopeNLU, University of Copenhagen, working on LLMs for healthcare and their evaluation">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -240,86 +240,119 @@
    - papers[].keywords 에 적은 키워드로 Research Map이 자동 생성됩니다.
    - areas 는 키워드를 색깔별 그룹으로 묶는 용도 (안 넣은 키워드는 회색).
    - me 에 적은 이름은 저자 목록에서 굵게 표시됩니다.
-   - 아래 논문들은 전부 예시(placeholder)입니다.
    ===================================================================== */
 const DATA = {
-  name: "Your Name",
-  role: "Ph.D. Student · NLP Lab, Your University",
+  name: "Jean Seo",
+  role: "Ph.D. Student · <a href='https://www.copenlu.com/'>CopeNLU</a>, University of Copenhagen",
   photo: "images/profile.jpg",               // 사진 경로 (없으면 이니셜 표시)
   bio: [
-    "I'm a Ph.D. student working on <b>large language models</b>, advised by <a href='#'>Prof. Advisor</a>. My research focuses on making LLMs reason more reliably and align better with human preferences.",
-    "Previously, I was a research intern at <a href='#'>Some Lab</a>. Feel free to reach out at <a href='mailto:you@university.edu'>you@university.edu</a>."
+    "I am a first-year PhD student at <a href='https://www.copenlu.com/'>CopeNLU</a>, Department of Computer Science, University of Copenhagen, advised by Prof. <a href='https://isabelleaugenstein.github.io/'>Isabelle Augenstein</a> and co-advised by Prof. <a href='https://apepa.github.io/'>Pepa Atanasova</a>. Before that, I obtained my MA in Computational Linguistics at Seoul National University, advised by Prof. <a href='https://knlp.snu.ac.kr/'>Hyopil Shin</a>, and my BA in English Language &amp; Literature and Psychology at Yonsei University, Seoul.",
+    "My core interest in AI lies in <b>LLMs</b>, especially in <b>healthcare</b> and their <b>evaluation</b>, and <b>training in low-resource scenarios</b>. Other than AI, I am mostly excited about start-ups. Feel free to reach out at <a href='mailto:jean.seo@di.ku.dk'>jean.seo@di.ku.dk</a>."
   ],
   links: [
-    { label: "Google Scholar", url: "https://scholar.google.com/citations?user=XXXX" },
-    { label: "Hugging Face",   url: "https://huggingface.co/your-id" },
-    { label: "GitHub",         url: "https://github.com/your-id" },
-    { label: "LinkedIn",       url: "https://www.linkedin.com/in/your-id" },
-    { label: "CV",             url: "files/cv.pdf" }
+    { label: "Google Scholar", url: "https://scholar.google.com/citations?hl=ko&user=JviUsPcAAAAJ" },
+    { label: "Hugging Face",   url: "https://huggingface.co/seemdog" },
+    { label: "GitHub",         url: "https://github.com/seemdog" },
+    { label: "LinkedIn",       url: "https://www.linkedin.com/in/seemdog" }
   ],
-  me: "Your Name",
+  me: "Jean Seo",
   areas: [
-    { name: "Reasoning",  color: "#4263eb", keywords: ["chain-of-thought", "math reasoning", "process reward"] },
-    { name: "Alignment",  color: "#e64980", keywords: ["RLHF", "preference learning", "reward modeling", "safety"] },
-    { name: "Efficiency", color: "#12b886", keywords: ["distillation", "quantization", "long context"] },
-    { name: "Evaluation", color: "#f08c00", keywords: ["benchmark", "LLM-as-a-judge", "multilingual"] }
+    { name: "Healthcare",          color: "#e64980", keywords: ["medical", "clinical agents"] },
+    { name: "Evaluation & Safety", color: "#4263eb", keywords: ["evaluation", "safety", "hallucination"] },
+    { name: "Low-resource",        color: "#12b886", keywords: ["Korean", "Manchu", "low-resource", "dataset"] },
+    { name: "Modeling",            color: "#f08c00", keywords: ["ASR", "NER", "machine translation", "tokenizer", "mixture of experts", "instruction tuning", "preference data"] }
   ],
   papers: [
     {
-      title: "Example Paper: Step-level Rewards for Multi-step Math Reasoning",
-      authors: "Your Name, Coauthor A, Prof. Advisor",
-      venue: "ACL", year: 2026, award: "Oral",
-      url: "https://arxiv.org/abs/xxxx.xxxxx",
-      links: { PDF: "#", Code: "#", Model: "#" },
-      keywords: ["math reasoning", "process reward", "reward modeling", "chain-of-thought"]
+      title: "When Multiple Script Matters: Evaluating ASR in Clinical Settings",
+      authors: "Jean Seo, Minkyu Kim, Jeonguk Lee, Jisoo Jung, Wooseok Han, Eunho Yang",
+      venue: "Interspeech", year: 2026, award: "Oral",
+      url: "https://arxiv.org/abs/2606.17826",
+      keywords: ["medical", "ASR", "evaluation"]
     },
     {
-      title: "Example Paper: A Multilingual Benchmark for Compositional Reasoning",
-      authors: "Coauthor B*, Your Name*, Prof. Advisor",
-      venue: "EMNLP", year: 2026,
-      url: "#",
-      links: { PDF: "#", Dataset: "#" },
-      keywords: ["multilingual", "benchmark", "math reasoning"]
+      title: "Evaluating the Pre-Consultation Ability of LLMs using Diagnostic Guidelines",
+      authors: "Jean Seo, Gibaeg Kim, Kihun Shin, Seungseop Lim, Hyunkyung Lee, Wooseok Han, Jongwon Lee, Eunho Yang",
+      venue: "EACL Industry", year: 2026,
+      url: "https://arxiv.org/abs/2601.03627",
+      keywords: ["medical", "clinical agents", "evaluation"]
     },
     {
-      title: "Example Paper: Low-bit Quantization for Long-Context Inference",
-      authors: "Your Name, Coauthor C",
-      venue: "ICLR", year: 2026,
-      url: "#",
-      links: { PDF: "#", Code: "#" },
-      keywords: ["quantization", "long context", "benchmark"]
+      title: "Taxonomy of Comprehensive Safety for Clinical Agents",
+      authors: "Jean Seo, Hyunkyung Lee, Gibaeg Kim, Wooseok Han, Jaehyo Yoo, Seungseop Lim, Kihun Shin, Eunho Yang",
+      venue: "EMNLP Industry", year: 2025,
+      url: "https://aclanthology.org/2025.emnlp-industry.124/",
+      keywords: ["medical", "clinical agents", "safety"]
     },
     {
-      title: "Example Paper: Safety Alignment Without Over-Refusal",
-      authors: "Coauthor D, Your Name, Prof. Advisor",
-      venue: "arXiv", year: 2026,
-      url: "#",
-      links: { PDF: "#" },
-      keywords: ["safety", "RLHF", "preference learning"]
+      title: "Format Inertia: A Failure Mechanism of LLMs in Medical Pre-Consultation",
+      authors: "Seungseop Lim, Gibaeg Kim, Wooseok Han, Jean Seo, Hyunkyung Lee, Jaehyo Yoo, Eunho Yang",
+      venue: "EMNLP Industry", year: 2025,
+      url: "https://aclanthology.org/2025.emnlp-industry.101/",
+      keywords: ["medical", "clinical agents", "evaluation"]
     },
     {
-      title: "Example Paper: Preference Learning from Noisy Human Feedback",
-      authors: "Your Name, Coauthor A, Prof. Advisor",
-      venue: "NeurIPS", year: 2025,
-      url: "#",
-      links: { PDF: "#", Code: "#" },
-      keywords: ["preference learning", "RLHF", "reward modeling"]
+      title: "Advancing Korean Medical Large Language Models: Automated Pipeline for Korean Medical Preference Dataset Construction",
+      authors: "Jean Seo, Sumin Park, Sungjoo Byun, Jinwook Choi, Jinho Choi, Hyopil Shin",
+      venue: "HIR", year: 2025,
+      url: "https://e-hir.org/journal/view.php?number=1248",
+      keywords: ["medical", "Korean", "preference data", "dataset"]
     },
     {
-      title: "Example Paper: Distilling Long Chains of Thought into Small Models",
-      authors: "Your Name, Coauthor E",
-      venue: "EMNLP", year: 2025,
-      url: "#",
-      links: { PDF: "#", Code: "#", Model: "#" },
-      keywords: ["distillation", "chain-of-thought", "math reasoning"]
+      title: "MoFE: Mixture of Frozen Experts Architecture",
+      authors: "Jean Seo, Jaeyoon Kim, Hyopil Shin",
+      venue: "NAACL Industry", year: 2025,
+      url: "https://aclanthology.org/2025.naacl-industry.28/",
+      keywords: ["mixture of experts", "low-resource"]
     },
     {
-      title: "Example Paper: Positional Bias in LLM-as-a-Judge across Languages",
-      authors: "Coauthor F, Your Name",
-      venue: "NAACL", year: 2025,
-      url: "#",
-      links: { PDF: "#" },
-      keywords: ["LLM-as-a-judge", "multilingual", "benchmark"]
+      title: "How does a Language-Specific Tokenizer affect LLMs?",
+      authors: "Jean Seo, Jaeyoon Kim, Sungjoo Byun, Hyopil Shin",
+      venue: "arXiv", year: 2025,
+      url: "https://arxiv.org/abs/2502.12560",
+      keywords: ["tokenizer", "Korean"]
+    },
+    {
+      title: "DAHL: Domain-specific Automated Hallucination Evaluation of Long-Form Text through a Benchmark Dataset in Biomedicine",
+      authors: "Jean Seo, Jongwon Lim, Dongjun Jang, Hyopil Shin",
+      venue: "FEVER @ EMNLP", year: 2024,
+      url: "https://arxiv.org/abs/2411.09255",
+      keywords: ["medical", "hallucination", "evaluation", "dataset"]
+    },
+    {
+      title: "ManWav: The First Manchu ASR Model",
+      authors: "Jean Seo, Minha Kang, Sungjoo Byun, Sangah Lee",
+      venue: "Field Matters @ ACL", year: 2024,
+      url: "https://aclanthology.org/2024.fieldmatters-1.2/",
+      keywords: ["Manchu", "ASR", "low-resource"]
+    },
+    {
+      title: "Korean Bio-Medical Corpus (KBMC) for Medical Named Entity Recognition",
+      authors: "Sungjoo Byun, Jiseung Hong, Sumin Park, Dongjun Jang, Jean Seo, Minseok Kim, Chaeyoung Oh, Hyopil Shin",
+      venue: "LREC-COLING", year: 2024,
+      url: "https://aclanthology.org/2024.lrec-main.868/",
+      keywords: ["medical", "Korean", "NER", "dataset"]
+    },
+    {
+      title: "ManNER & ManPOS: Pioneering NLP for Endangered Manchu Language",
+      authors: "Sangah Lee, Sungjoo Byun, Jean Seo, Minha Kang",
+      venue: "LREC-COLING", year: 2024,
+      url: "https://aclanthology.org/2024.lrec-main.961/",
+      keywords: ["Manchu", "NER", "low-resource", "dataset"]
+    },
+    {
+      title: "DaG LLM ver 1.0: Pioneering Instruction-Tuned Language Modeling for Korean NLP",
+      authors: "Dongjun Jang, Sangah Lee, Sungjoo Byun, Jinwoong Kim, Jean Seo, Minseok Kim, Soyeon Kim, Chaeyoung Oh, Jaeyoon Kim, Hyemi Jo, Hyopil Shin",
+      venue: "arXiv", year: 2023,
+      url: "https://arxiv.org/abs/2311.13784",
+      keywords: ["Korean", "instruction tuning"]
+    },
+    {
+      title: "Mergen: The First Manchu-Korean Machine Translation Model Trained on Augmented Data",
+      authors: "Jean Seo, Sungjoo Byun, Minha Kang, Sangah Lee",
+      venue: "MRL @ EMNLP", year: 2023,
+      url: "https://aclanthology.org/2023.mrl-1.10/",
+      keywords: ["Manchu", "Korean", "machine translation", "low-resource"]
     }
   ],
   updated: "October 2026"
@@ -361,7 +394,6 @@ const DATA = {
     img.src = DATA.photo;
   }
   $("#footer").innerHTML = `© ${new Date().getFullYear()} ${esc(DATA.name)} · Last updated ${esc(DATA.updated)}`;
-
   /* ---------- Filter state ---------- */
   let filter = null; // { type: "kw" | "area", value }
   const same = (a, b) => a && b && a.type === b.type && a.value === b.value;
