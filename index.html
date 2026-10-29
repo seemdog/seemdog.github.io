@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name</title>
+<meta name="description" content="Personal homepage — NLP / LLM research">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --surface: #ffffff;
+    --text: #1c1c1e;
+    --muted: #6d6d73;
+    --line: #e9e6e0;
+    --edge: #d8d4cc;
+    --dot: #ece9e3;
+    --accent: #3b5bdb;
+    --accent-soft: #eef1fd;
+    --chip: #f3f1ed;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111113;
+      --surface: #18181b;
+      --text: #ececef;
+      --muted: #9b9ba3;
+      --line: #2a2a2f;
+      --edge: #3a3a41;
+      --dot: #222226;
+      --accent: #91a7ff;
+      --accent-soft: #1d2340;
+      --chip: #222226;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111113;
+    --surface: #18181b;
+    --text: #ececef;
+    --muted: #9b9ba3;
+    --line: #2a2a2f;
+    --edge: #3a3a41;
+    --dot: #222226;
+    --accent: #91a7ff;
+    --accent-soft: #1d2340;
+    --chip: #222226;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 15.5px/1.65 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    transition: background .25s, color .25s;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  button { font: inherit; color: inherit; }
+
+  .wrap { position: relative; max-width: 860px; margin: 0 auto; padding: 80px 24px 56px; }
+
+  /* ---------- Hero ---------- */
+  .hero { display: grid; grid-template-columns: 152px 1fr; gap: 40px; align-items: start; }
+  .photo {
+    width: 152px; height: 152px; border-radius: 30px; overflow: hidden;
+    background: var(--accent-soft); color: var(--accent);
+    display: grid; place-items: center;
+    font: 52px/1 "Instrument Serif", Georgia, serif;
+    box-shadow: 0 0 0 1px var(--line), 0 18px 40px -24px rgba(0,0,0,.45);
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  h1 {
+    font: 400 50px/1.02 "Instrument Serif", Georgia, serif;
+    letter-spacing: -.012em; margin: 2px 0 8px;
+  }
+  .role { color: var(--muted); margin: 0 0 20px; font-size: 14.5px; }
+  .bio p { margin: 0 0 12px; }
+  .bio b { font-weight: 600; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 13px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--surface);
+    color: var(--text); font-size: 13px; font-weight: 500;
+    transition: border-color .15s, color .15s, transform .15s;
+  }
+  .pill:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; transform: translateY(-1px); }
+  .pill .arr { opacity: .45; font-size: 11px; }
+
+  /* ---------- Sections ---------- */
+  section { margin-top: 76px; }
+  .section-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px 16px; flex-wrap: wrap;
+    padding-bottom: 12px; border-bottom: 1px solid var(--line);
+  }
+  h2 { font: 400 30px/1.1 "Instrument Serif", Georgia, serif; margin: 0; }
+  .hint { color: var(--muted); font-size: 13px; margin: 0; }
+
+  /* ---------- Research map ---------- */
+  .legend { display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 0 12px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 4px 11px; border-radius: 999px; cursor: pointer;
+    border: 1px solid transparent; background: var(--chip);
+    font-size: 12.5px; font-weight: 500; transition: border-color .15s, background .15s;
+  }
+  .chip:hover { border-color: var(--line); }
+  .chip.on { background: var(--surface); border-color: currentColor; }
+  .chip i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  .chip small { color: var(--muted); font-weight: 400; }
+
+  .graph {
+    position: relative; width: 100%; min-height: 200px;
+    border: 1px solid var(--line); border-radius: 22px; overflow: hidden;
+    background-color: var(--surface);
+    background-image: radial-gradient(var(--dot) 1px, transparent 1.2px);
+    background-size: 18px 18px;
+  }
+  .graph svg { display: block; touch-action: none; }
+  .graph .edge { stroke: var(--edge); stroke-linecap: round; transition: opacity .2s; }
+  .graph .node { cursor: pointer; transition: opacity .2s; }
+  .graph .node circle { fill-opacity: .16; stroke-width: 1.5; transition: fill-opacity .2s, stroke-width .2s; }
+  .graph .node:hover circle, .graph .node.on circle { fill-opacity: .45; stroke-width: 2.5; }
+  .graph text {
+    fill: var(--text); font: 500 12px Inter, sans-serif; pointer-events: none;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 3.5px; stroke-linejoin: round;
+  }
+  .graph .dim { opacity: .14; }
+  .cloud { display: flex; flex-wrap: wrap; gap: 8px; padding: 22px; }
+
+  /* ---------- Publications ---------- */
+  .filter { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 13px; }
+  .filter b { color: var(--text); font-weight: 600; }
+  .clear {
+    border: 1px solid var(--line); background: var(--surface); border-radius: 999px;
+    padding: 2px 10px; font-size: 12px; cursor: pointer;
+  }
+  .clear:hover { border-color: var(--accent); color: var(--accent); }
+  .pubs { list-style: none; margin: 0; padding: 0; }
+  .year {
+    margin: 30px 0 4px; color: var(--muted);
+    font-size: 12px; font-weight: 600; letter-spacing: .1em;
+  }
+  .pub {
+    display: grid; grid-template-columns: 92px 1fr; gap: 20px;
+    padding: 16px 0; border-bottom: 1px dashed var(--line);
+    animation: fade .3s ease both;
+  }
+  @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  .venue {
+    align-self: start; text-align: center;
+    padding: 4px 8px; border-radius: 8px;
+    background: var(--accent-soft); color: var(--accent);
+    font-size: 11.5px; font-weight: 600; letter-spacing: .02em;
+  }
+  .ptitle { font-weight: 600; line-height: 1.42; }
+  .ptitle a { color: var(--text); }
+  .ptitle a:hover { color: var(--accent); }
+  .award {
+    display: inline-block; margin-left: 6px; padding: 0 7px; border-radius: 6px;
+    font-size: 11px; font-weight: 600; vertical-align: 2px;
+    color: #b35c00; background: #fff1de;
+  }
+  :root[data-theme="dark"] .award { color: #ffb562; background: #3a2a14; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .award { color: #ffb562; background: #3a2a14; } }
+  .authors { color: var(--muted); font-size: 14px; margin-top: 2px; }
+  .authors .me { color: var(--text); font-weight: 600; }
+  .prow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 8px; }
+  .plinks { display: flex; gap: 12px; font-size: 13px; font-weight: 500; }
+  .kws { display: flex; flex-wrap: wrap; gap: 5px; }
+  .kws .chip { padding: 1px 9px; font-size: 11.5px; }
+  .empty { color: var(--muted); padding: 24px 0; }
+
+  footer { margin-top: 72px; color: var(--muted); font-size: 12.5px; }
+
+  .theme-toggle {
+    position: absolute; top: 24px; right: 24px;
+    width: 36px; height: 36px; border-radius: 50%;
+    border: 1px solid var(--line); background: var(--surface);
+    cursor: pointer; font-size: 15px; line-height: 1;
+  }
+  .theme-toggle:hover { border-color: var(--accent); }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 64px 16px 40px; }
+    .theme-toggle { top: 16px; right: 16px; }
+    .hero { grid-template-columns: 1fr; gap: 22px; }
+    .photo { width: 112px; height: 112px; border-radius: 24px; font-size: 40px; }
+    h1 { font-size: 40px; }
+    section { margin-top: 56px; }
+    .pub { grid-template-columns: 1fr; gap: 8px; }
+    .venue { justify-self: start; }
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <button class="theme-toggle" id="theme" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+
+  <header class="hero">
+    <div class="photo" id="photo"></div>
+    <div>
+      <h1 id="name"></h1>
+      <p class="role" id="role"></p>
+      <div class="bio" id="bio"></div>
+      <nav class="links" id="links"></nav>
+    </div>
+  </header>
+
+  <section>
+    <div class="section-head">
+      <h2>Research Map</h2>
+      <p class="hint">Bubble size = number of papers · lines = keywords used together · click to filter</p>
+    </div>
+    <div class="legend" id="legend"></div>
+    <div class="graph" id="graph"></div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Publications</h2>
+      <div class="filter" id="filter"></div>
+    </div>
+    <ol class="pubs" id="pubs"></ol>
+  </section>
+
+  <footer id="footer"></footer>
+</main>
+
+<script>
+/* =====================================================================
+   ✏️  여기만 수정하면 됩니다.
+   - papers[].keywords 에 적은 키워드로 Research Map이 자동 생성됩니다.
+   - areas 는 키워드를 색깔별 그룹으로 묶는 용도 (안 넣은 키워드는 회색).
+   - me 에 적은 이름은 저자 목록에서 굵게 표시됩니다.
+   - 아래 논문들은 전부 예시(placeholder)입니다.
+   ===================================================================== */
+const DATA = {
+  name: "Your Name",
+  role: "Ph.D. Student · NLP Lab, Your University",
+  photo: "images/profile.jpg",               // 사진 경로 (없으면 이니셜 표시)
+  bio: [
+    "I'm a Ph.D. student working on <b>large language models</b>, advised by <a href='#'>Prof. Advisor</a>. My research focuses on making LLMs reason more reliably and align better with human preferences.",
+    "Previously, I was a research intern at <a href='#'>Some Lab</a>. Feel free to reach out at <a href='mailto:you@university.edu'>you@university.edu</a>."
+  ],
+  links: [
+    { label: "Google Scholar", url: "https://scholar.google.com/citations?user=XXXX" },
+    { label: "Hugging Face",   url: "https://huggingface.co/your-id" },
+    { label: "GitHub",         url: "https://github.com/your-id" },
+    { label: "LinkedIn",       url: "https://www.linkedin.com/in/your-id" },
+    { label: "CV",             url: "files/cv.pdf" }
+  ],
+  me: "Your Name",
+  areas: [
+    { name: "Reasoning",  color: "#4263eb", keywords: ["chain-of-thought", "math reasoning", "process reward"] },
+    { name: "Alignment",  color: "#e64980", keywords: ["RLHF", "preference learning", "reward modeling", "safety"] },
+    { name: "Efficiency", color: "#12b886", keywords: ["distillation", "quantization", "long context"] },
+    { name: "Evaluation", color: "#f08c00", keywords: ["benchmark", "LLM-as-a-judge", "multilingual"] }
+  ],
+  papers: [
+    {
+      title: "Example Paper: Step-level Rewards for Multi-step Math Reasoning",
+      authors: "Your Name, Coauthor A, Prof. Advisor",
+      venue: "ACL", year: 2026, award: "Oral",
+      url: "https://arxiv.org/abs/xxxx.xxxxx",
+      links: { PDF: "#", Code: "#", Model: "#" },
+      keywords: ["math reasoning", "process reward", "reward modeling", "chain-of-thought"]
+    },
+    {
+      title: "Example Paper: A Multilingual Benchmark for Compositional Reasoning",
+      authors: "Coauthor B*, Your Name*, Prof. Advisor",
+      venue: "EMNLP", year: 2026,
+      url: "#",
+      links: { PDF: "#", Dataset: "#" },
+      keywords: ["multilingual", "benchmark", "math reasoning"]
+    },
+    {
+      title: "Example Paper: Low-bit Quantization for Long-Context Inference",
+      authors: "Your Name, Coauthor C",
+      venue: "ICLR", year: 2026,
+      url: "#",
+      links: { PDF: "#", Code: "#" },
+      keywords: ["quantization", "long context", "benchmark"]
+    },
+    {
+      title: "Example Paper: Safety Alignment Without Over-Refusal",
+      authors: "Coauthor D, Your Name, Prof. Advisor",
+      venue: "arXiv", year: 2026,
+      url: "#",
+      links: { PDF: "#" },
+      keywords: ["safety", "RLHF", "preference learning"]
+    },
+    {
+      title: "Example Paper: Preference Learning from Noisy Human Feedback",
+      authors: "Your Name, Coauthor A, Prof. Advisor",
+      venue: "NeurIPS", year: 2025,
+      url: "#",
+      links: { PDF: "#", Code: "#" },
+      keywords: ["preference learning", "RLHF", "reward modeling"]
+    },
+    {
+      title: "Example Paper: Distilling Long Chains of Thought into Small Models",
+      authors: "Your Name, Coauthor E",
+      venue: "EMNLP", year: 2025,
+      url: "#",
+      links: { PDF: "#", Code: "#", Model: "#" },
+      keywords: ["distillation", "chain-of-thought", "math reasoning"]
+    },
+    {
+      title: "Example Paper: Positional Bias in LLM-as-a-Judge across Languages",
+      authors: "Coauthor F, Your Name",
+      venue: "NAACL", year: 2025,
+      url: "#",
+      links: { PDF: "#" },
+      keywords: ["LLM-as-a-judge", "multilingual", "benchmark"]
+    }
+  ],
+  updated: "October 2026"
+};
+</script>
+
+<script>
+(function () {
+  const $ = (s) => document.querySelector(s);
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const areaOf = (k) => DATA.areas.find((a) => a.keywords.includes(k));
+  const colorOf = (k) => (areaOf(k) || {}).color || "#868e96";
+
+  /* ---------- Theme ---------- */
+  const root = document.documentElement;
+  try { const t = localStorage.getItem("theme"); if (t) root.dataset.theme = t; } catch (e) {}
+  $("#theme").addEventListener("click", () => {
+    const cur = root.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    const next = cur === "dark" ? "light" : "dark";
+    root.dataset.theme = next;
+    try { localStorage.setItem("theme", next); } catch (e) {}
+  });
+
+  /* ---------- Hero ---------- */
+  document.title = DATA.name;
+  $("#name").textContent = DATA.name;
+  $("#role").innerHTML = DATA.role;
+  $("#bio").innerHTML = DATA.bio.map((p) => `<p>${p}</p>`).join("");
+  $("#links").innerHTML = DATA.links.map((l) =>
+    `<a class="pill" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}<span class="arr">↗</span></a>`
+  ).join("");
+  const initials = DATA.name.split(/\s+/).map((w) => w[0]).slice(0, 2).join("");
+  const ph = $("#photo");
+  ph.textContent = initials;
+  if (DATA.photo) {
+    const img = new Image();
+    img.alt = DATA.name;
+    img.onload = () => { ph.textContent = ""; ph.appendChild(img); };
+    img.src = DATA.photo;
+  }
+  $("#footer").innerHTML = `© ${new Date().getFullYear()} ${esc(DATA.name)} · Last updated ${esc(DATA.updated)}`;
+
+  /* ---------- Filter state ---------- */
+  let filter = null; // { type: "kw" | "area", value }
+  const same = (a, b) => a && b && a.type === b.type && a.value === b.value;
+  function matches(p) {
+    if (!filter) return true;
+    if (filter.type === "kw") return p.keywords.includes(filter.value);
+    const a = DATA.areas.find((x) => x.name === filter.value);
+    return p.keywords.some((k) => a.keywords.includes(k));
+  }
+  function setFilter(f) {
+    filter = same(f, filter) ? null : f;
+    renderLegend(); renderPubs(); updateGraphState();
+  }
+
+  /* ---------- Legend ---------- */
+  function renderLegend() {
+    $("#legend").innerHTML = DATA.areas.map((a) => {
+      const n = DATA.papers.filter((p) => p.keywords.some((k) => a.keywords.includes(k))).length;
+      const on = filter && filter.type === "area" && filter.value === a.name;
+      return `<button class="chip${on ? " on" : ""}" data-area="${esc(a.name)}" style="${on ? `color:${a.color}` : ""}">
+        <i style="background:${a.color}"></i><span style="color:var(--text)">${esc(a.name)}</span><small>${n}</small></button>`;
+    }).join("");
+  }
+  $("#legend").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-area]");
+    if (b) setFilter({ type: "area", value: b.dataset.area });
+  });
+
+  /* ---------- Publications ---------- */
+  function pubHTML(p) {
+    const authors = esc(p.authors).split(esc(DATA.me)).join(`<span class="me">${esc(DATA.me)}</span>`);
+    const links = Object.entries(p.links || {}).map(([k, v]) =>
+      `<a href="${esc(v)}" target="_blank" rel="noopener">${esc(k)}</a>`).join("");
+    const kws = p.keywords.map((k) => {
+      const on = filter && filter.type === "kw" && filter.value === k;
+      return `<button class="chip${on ? " on" : ""}" data-kw="${esc(k)}" style="${on ? `color:${colorOf(k)}` : ""}"><i style="background:${colorOf(k)}"></i><span style="color:var(--text)">${esc(k)}</span></button>`;
+    }).join("");
+    const title = p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>` : esc(p.title);
+    return `<li class="pub">
+      <div class="venue">${esc(p.venue)}</div>
+      <div>
+        <div class="ptitle">${title}${p.award ? `<span class="award">${esc(p.award)}</span>` : ""}</div>
+        <div class="authors">${authors}</div>
+        <div class="prow"><div class="plinks">${links}</div><div class="kws">${kws}</div></div>
+      </div>
+    </li>`;
+  }
+  function renderPubs() {
+    const list = DATA.papers.filter(matches).sort((a, b) => b.year - a.year);
+    const years = [...new Set(list.map((p) => p.year))];
+    $("#pubs").innerHTML = years.map((y) =>
+      `<li class="year">${y}</li>` + list.filter((p) => p.year === y).map(pubHTML).join("")
+    ).join("") || `<li class="empty">No papers match this keyword.</li>`;
+    $("#filter").innerHTML = filter
+      ? `<span>${list.length} of ${DATA.papers.length} · <b>${esc(filter.value)}</b></span><button class="clear" id="clear">Clear ✕</button>`
+      : `<span>${DATA.papers.length} papers</span>`;
+    const c = $("#clear");
+    if (c) c.addEventListener("click", () => setFilter(null));
+  }
+  $("#pubs").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-kw]");
+    if (b) setFilter({ type: "kw", value: b.dataset.kw });
+  });
+
+  /* ---------- Research map (D3 force graph) ---------- */
+  function buildGraph() {
+    const count = new Map(), pair = new Map();
+    DATA.papers.forEach((p) => {
+      const ks = [...new Set(p.keywords)];
+      ks.forEach((k) => count.set(k, (count.get(k) || 0) + 1));
+      for (let i = 0; i < ks.length; i++)
+        for (let j = i + 1; j < ks.length; j++) {
+          const key = [ks[i], ks[j]].sort().join("||");
+          pair.set(key, (pair.get(key) || 0) + 1);
+        }
+    });
+    const nb = new Map([...count.keys()].map((k) => [k, new Set([k])]));
+    const links = [...pair].map(([key, w]) => {
+      const [s, t] = key.split("||");
+      nb.get(s).add(t); nb.get(t).add(s);
+      return { source: s, target: t, weight: w };
+    });
+    const nodes = [...count].map(([id, c]) => ({ id, count: c, area: areaOf(id), color: colorOf(id) }));
+    return { nodes, links, nb };
+  }
+
+  let g = null, lastW = 0;
+  function renderGraph() {
+    const el = $("#graph");
+    const W = el.clientWidth;
+    if (!W || Math.abs(W - lastW) < 2) return;
+    lastW = W;
+    if (g) g.sim.stop();
+    el.innerHTML = "";
+
+    const { nodes, links, nb } = buildGraph();
+
+    if (!window.d3) { // fallback: simple keyword cloud
+      el.innerHTML = `<div class="cloud">${nodes.sort((a, b) => b.count - a.count).map((d) =>
+        `<button class="chip" data-kw="${esc(d.id)}" style="font-size:${11 + d.count * 2}px"><i style="background:${d.color}"></i>${esc(d.id)} <small>${d.count}</small></button>`
+      ).join("")}</div>`;
+      el.onclick = (e) => { const b = e.target.closest("[data-kw]"); if (b) setFilter({ type: "kw", value: b.dataset.kw }); };
+      g = null;
+      return;
+    }
+
+    const small = W < 560;
+    const H = small ? 380 : 430;
+    const maxC = d3.max(nodes, (d) => d.count) || 1;
+    const R = d3.scaleSqrt().domain([1, maxC]).range([7, small ? 19 : 25]);
+    const anchors = {};
+    DATA.areas.forEach((a, i, arr) => {
+      const ang = -Math.PI / 2 + (2 * Math.PI * i) / arr.length;
+      anchors[a.name] = { x: W / 2 + Math.cos(ang) * W * 0.24, y: H / 2 + Math.sin(ang) * H * 0.26 };
+    });
+    nodes.forEach((d) => {
+      const a = d.area && anchors[d.area.name];
+      d.ax = a ? a.x : W / 2; d.ay = a ? a.y : H / 2;
+      d.x = d.ax + (Math.random() - 0.5) * 40; d.y = d.ay + (Math.random() - 0.5) * 40;
+      d.lw = d.id.length * 6.6;
+    });
+
+    const svg = d3.select(el).append("svg")
+      .attr("width", W).attr("height", H).attr("viewBox", `0 0 ${W} ${H}`)
+      .attr("role", "img").attr("aria-label", "Map of research keywords");
+
+    const link = svg.append("g").selectAll("line").data(links).join("line")
+      .attr("class", "edge").attr("stroke-width", (d) => 0.8 + d.weight * 1.1);
+
+    const node = svg.append("g").selectAll("g").data(nodes).join("g")
+      .attr("class", "node")
+      .on("mouseenter", (e, d) => hover(d))
+      .on("mouseleave", () => hover(null))
+      .on("click", (e, d) => setFilter({ type: "kw", value: d.id }));
+
+    node.append("circle").attr("r", (d) => R(d.count))
+      .style("fill", (d) => d.color).style("stroke", (d) => d.color);
+    node.append("text").attr("text-anchor", "middle").attr("dy", (d) => R(d.count) + 14).text((d) => d.id);
+    node.append("title").text((d) => `${d.id} — ${d.count} paper${d.count > 1 ? "s" : ""}`);
+
+    const sim = d3.forceSimulation(nodes)
+      .force("link", d3.forceLink(links).id((d) => d.id)
+        .distance((l) => 64 + (l.source.area !== l.target.area ? 46 : 0))
+        .strength((l) => Math.min(0.9, 0.08 + 0.08 * l.weight)))
+      .force("charge", d3.forceManyBody().strength(small ? -90 : -130))
+      .force("collide", d3.forceCollide((d) => R(d.count) + Math.min(34, d.lw * 0.32) + 6).iterations(2))
+      .force("x", d3.forceX((d) => d.ax).strength(0.09))
+      .force("y", d3.forceY((d) => d.ay).strength(0.12))
+      .on("tick", () => {
+        nodes.forEach((d) => {
+          const r = R(d.count), mx = Math.max(r, d.lw / 2) + 6;
+          d.x = Math.max(mx, Math.min(W - mx, d.x));
+          d.y = Math.max(r + 6, Math.min(H - r - 22, d.y));
+        });
+        link.attr("x1", (d) => d.source.x).attr("y1", (d) => d.source.y)
+            .attr("x2", (d) => d.target.x).attr("y2", (d) => d.target.y);
+        node.attr("transform", (d) => `translate(${d.x},${d.y})`);
+      });
+
+    node.call(d3.drag()
+      .on("start", (e, d) => { if (!e.active) sim.alphaTarget(0.2).restart(); d.fx = d.x; d.fy = d.y; })
+      .on("drag", (e, d) => { d.fx = e.x; d.fy = e.y; })
+      .on("end", (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }));
+
+    g = { sim, node, link, nb };
+    updateGraphState();
+  }
+
+  function hover(d) {
+    if (!g) return;
+    if (!d) return updateGraphState();
+    const near = g.nb.get(d.id);
+    g.node.classed("dim", (n) => !near.has(n.id));
+    g.link.classed("dim", (l) => l.source.id !== d.id && l.target.id !== d.id);
+  }
+
+  function updateGraphState() {
+    if (!g) return;
+    const inArea = (d) => d.area && d.area.name === filter.value;
+    g.node
+      .classed("on", (d) => !!filter && (filter.type === "kw" ? d.id === filter.value : inArea(d)))
+      .classed("dim", (d) => !!filter && (filter.type === "kw" ? !g.nb.get(filter.value).has(d.id) : !inArea(d)));
+    g.link.classed("dim", (l) => !!filter && (filter.type === "kw"
+      ? l.source.id !== filter.value && l.target.id !== filter.value
+      : !(inArea(l.source) && inArea(l.target))));
+  }
+
+  /* ---------- Init ---------- */
+  renderLegend();
+  renderPubs();
+  renderGraph();
+  let t;
+  if ("ResizeObserver" in window) {
+    new ResizeObserver(() => { clearTimeout(t); t = setTimeout(renderGraph, 150); }).observe($("#graph"));
+  } else {
+    addEventListener("resize", () => { clearTimeout(t); t = setTimeout(renderGraph, 150); });
+  }
+})();
+</script>
+</body>
+</html>
