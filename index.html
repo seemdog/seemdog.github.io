@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<base target="_blank">
 <title>Jean Seo</title>
 <meta name="description" content="Jean Seo — PhD student at CopeNLU, University of Copenhagen, working on LLMs for healthcare and their evaluation">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <style>
   :root {
@@ -71,27 +72,27 @@
     width: 152px; height: 152px; border-radius: 30px; overflow: hidden;
     background: var(--accent-soft); color: var(--accent);
     display: grid; place-items: center;
-    font: 52px/1 "Instrument Serif", Georgia, serif;
+    font-size: 44px; font-weight: 600; line-height: 1;
     box-shadow: 0 0 0 1px var(--line), 0 18px 40px -24px rgba(0,0,0,.45);
   }
   .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
   h1 {
-    font: 400 50px/1.02 "Instrument Serif", Georgia, serif;
-    letter-spacing: -.012em; margin: 2px 0 8px;
+    font-size: 38px; font-weight: 700; line-height: 1.1;
+    letter-spacing: -.02em; margin: 4px 0 10px;
   }
   .role { color: var(--muted); margin: 0 0 20px; font-size: 14.5px; }
   .bio p { margin: 0 0 12px; }
   .bio b { font-weight: 600; }
   .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-  .pill {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 6px 13px; border-radius: 999px;
+  .icon-link {
+    display: inline-grid; place-items: center;
+    width: 38px; height: 38px; border-radius: 50%;
     border: 1px solid var(--line); background: var(--surface);
-    color: var(--text); font-size: 13px; font-weight: 500;
+    color: var(--text);
     transition: border-color .15s, color .15s, transform .15s;
   }
-  .pill:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; transform: translateY(-1px); }
-  .pill .arr { opacity: .45; font-size: 11px; }
+  .icon-link:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; transform: translateY(-1px); }
+  .icon-link svg { width: 17px; height: 17px; display: block; }
 
   /* ---------- Sections ---------- */
   section { margin-top: 76px; }
@@ -100,7 +101,7 @@
     gap: 12px 16px; flex-wrap: wrap;
     padding-bottom: 12px; border-bottom: 1px solid var(--line);
   }
-  h2 { font: 400 30px/1.1 "Instrument Serif", Georgia, serif; margin: 0; }
+  h2 { font-size: 22px; font-weight: 600; line-height: 1.2; letter-spacing: -.01em; margin: 0; }
   .hint { color: var(--muted); font-size: 13px; margin: 0; }
 
   /* ---------- Research map ---------- */
@@ -170,6 +171,11 @@
   }
   :root[data-theme="dark"] .award { color: #ffb562; background: #3a2a14; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .award { color: #ffb562; background: #3a2a14; } }
+  .status {
+    display: inline-block; margin-left: 6px; padding: 0 7px; border-radius: 6px;
+    font-size: 11px; font-weight: 600; vertical-align: 2px;
+    color: var(--muted); background: var(--chip); border: 1px solid var(--line);
+  }
   .authors { color: var(--muted); font-size: 14px; margin-top: 2px; }
   .authors .me { color: var(--text); font-weight: 600; }
   .prow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 8px; }
@@ -192,8 +198,8 @@
     .wrap { padding: 64px 16px 40px; }
     .theme-toggle { top: 16px; right: 16px; }
     .hero { grid-template-columns: 1fr; gap: 22px; }
-    .photo { width: 112px; height: 112px; border-radius: 24px; font-size: 40px; }
-    h1 { font-size: 40px; }
+    .photo { width: 112px; height: 112px; border-radius: 24px; font-size: 34px; }
+    h1 { font-size: 32px; }
     section { margin-top: 56px; }
     .pub { grid-template-columns: 1fr; gap: 8px; }
     .venue { justify-self: start; }
@@ -239,32 +245,41 @@
    ✏️  여기만 수정하면 됩니다.
    - papers[].keywords 에 적은 키워드로 Research Map이 자동 생성됩니다.
    - areas 는 키워드를 색깔별 그룹으로 묶는 용도 (안 넣은 키워드는 회색).
-   - me 에 적은 이름은 저자 목록에서 굵게 표시됩니다.
+   - me 에 적은 이름은 저자 목록에서 굵게 표시되고, 맨 앞에 있으면 1저자로 집계됩니다.
+   - 심사 중인 논문은 papers[].status 에 "Under review" 를 적으면 배지로 표시됩니다.
    ===================================================================== */
 const DATA = {
   name: "Jean Seo",
   role: "Ph.D. Student · <a href='https://www.copenlu.com/'>CopeNLU</a>, University of Copenhagen",
   photo: "images/profile.jpg",               // 사진 경로 (없으면 이니셜 표시)
   bio: [
-    "I am a first-year PhD student at <a href='https://www.copenlu.com/'>CopeNLU</a>, Department of Computer Science, University of Copenhagen, advised by Prof. <a href='https://isabelleaugenstein.github.io/'>Isabelle Augenstein</a> and co-advised by Prof. <a href='https://apepa.github.io/'>Pepa Atanasova</a>. Before that, I obtained my MA in Computational Linguistics at Seoul National University, advised by Prof. <a href='https://knlp.snu.ac.kr/'>Hyopil Shin</a>, and my BA in English Language &amp; Literature and Psychology at Yonsei University, Seoul.",
-    "My core interest in AI lies in <b>LLMs</b>, especially in <b>healthcare</b> and their <b>evaluation</b>, and <b>training in low-resource scenarios</b>. Other than AI, I am mostly excited about start-ups. Feel free to reach out at <a href='mailto:jean.seo@di.ku.dk'>jean.seo@di.ku.dk</a>."
+    "I am a first-year PhD student at <a href='https://www.copenlu.com/'>CopeNLU</a>, Department of Computer Science, University of Copenhagen, advised by Prof. <a href='https://isabelleaugenstein.github.io/'>Isabelle Augenstein</a> and co-advised by Prof. <a href='https://apepa.github.io/'>Pepa Atanasova</a>. Before starting my PhD, I worked as an AI Researcher at <a href='https://aitrics.com/en/'>AITRICS</a>, building clinical agents. I obtained my MA in Computational Linguistics at Seoul National University, advised by Prof. <a href='https://linguist.snu.ac.kr/en/snu__professor/%ec%8b%a0%ed%9a%a8%ed%95%84/'>Hyopil Shin</a>, and my BA in English Language &amp; Literature and Psychology at Yonsei University, Seoul.",
+    "My research focuses on making AI safe and trustworthy in real-world applications such as healthcare through rigorous <b>evaluation</b>, <b>interpretation</b>, and <b>alignment</b>. I am currently working on <b>sycophancy</b>. Previously, I worked on low-resource language modeling, multilinguality, and ASR. Outside research, I am excited about start-ups (actually ran a few AI businesses before AI was cool)."
   ],
-  links: [
-    { label: "Google Scholar", url: "https://scholar.google.com/citations?hl=ko&user=JviUsPcAAAAJ" },
-    { label: "Hugging Face",   url: "https://huggingface.co/seemdog" },
-    { label: "GitHub",         url: "https://github.com/seemdog" },
-    { label: "LinkedIn",       url: "https://www.linkedin.com/in/seemdog" }
+  links: [                                   // icon: scholar | huggingface | linkedin | github | email
+    { label: "Google Scholar", icon: "scholar",     url: "https://scholar.google.com/citations?hl=ko&user=JviUsPcAAAAJ" },
+    { label: "Hugging Face",   icon: "huggingface", url: "https://huggingface.co/seemdog" },
+    { label: "LinkedIn",       icon: "linkedin",    url: "https://www.linkedin.com/in/seemdog" },
+    { label: "GitHub",         icon: "github",      url: "https://github.com/seemdog" },
+    { label: "Email",          icon: "email",       url: "mailto:jean.seo@di.ku.dk" }
   ],
   me: "Jean Seo",
   areas: [
     { name: "Healthcare",          color: "#e64980", keywords: ["medical", "clinical agents"] },
-    { name: "Evaluation & Safety", color: "#4263eb", keywords: ["evaluation", "safety", "hallucination"] },
+    { name: "Evaluation & Safety", color: "#4263eb", keywords: ["evaluation", "safety", "hallucination", "sycophancy"] },
     { name: "Low-resource",        color: "#12b886", keywords: ["Korean", "Manchu", "low-resource", "dataset"] },
     { name: "Modeling",            color: "#f08c00", keywords: ["ASR", "NER", "machine translation", "tokenizer", "mixture of experts", "instruction tuning", "preference data"] }
   ],
   papers: [
     {
-      title: "When Multiple Script Matters: Evaluating ASR in Clinical Settings",
+      title: "Claim Framing as a Driver of LLM Sycophancy",
+      authors: "Jean Seo, Pepa Atanasova, Isabelle Augenstein",
+      venue: "arXiv", year: 2026, status: "Under review",
+      url: "https://arxiv.org/abs/2610.18159",
+      keywords: ["sycophancy", "evaluation"]
+    },
+    {
+      title: "When Multiple Scripts Matter: Evaluating ASR in Clinical Settings",
       authors: "Jean Seo, Minkyu Kim, Jeonguk Lee, Jisoo Jung, Wooseok Han, Eunho Yang",
       venue: "Interspeech", year: 2026, award: "Oral",
       url: "https://arxiv.org/abs/2606.17826",
@@ -290,6 +305,13 @@ const DATA = {
       venue: "EMNLP Industry", year: 2025,
       url: "https://aclanthology.org/2025.emnlp-industry.101/",
       keywords: ["medical", "clinical agents", "evaluation"]
+    },
+    {
+      title: "H-DDx: A Hierarchical Evaluation Framework for Differential Diagnosis",
+      authors: "Seungseop Lim, Gibaeg Kim, Hyunkyung Lee, Wooseok Han, Jean Seo, Jaehyo Yoo, Eunho Yang",
+      venue: "GenAI4Health @ NeurIPS", year: 2025,
+      url: "https://arxiv.org/abs/2510.03700",
+      keywords: ["medical", "evaluation"]
     },
     {
       title: "Advancing Korean Medical Large Language Models: Automated Pipeline for Korean Medical Preference Dataset Construction",
@@ -341,6 +363,13 @@ const DATA = {
       keywords: ["Manchu", "NER", "low-resource", "dataset"]
     },
     {
+      title: "CARBD-Ko: A Contextually Annotated Review Benchmark Dataset for Aspect-Level Sentiment Classification in Korean",
+      authors: "Dongjun Jang, Jean Seo, Sungjoo Byun, Taekyoung Kim, Minseok Kim, Hyopil Shin",
+      venue: "arXiv", year: 2024,
+      url: "https://arxiv.org/abs/2402.15046",
+      keywords: ["Korean", "dataset"]
+    },
+    {
       title: "DaG LLM ver 1.0: Pioneering Instruction-Tuned Language Modeling for Korean NLP",
       authors: "Dongjun Jang, Sangah Lee, Sungjoo Byun, Jinwoong Kim, Jean Seo, Minseok Kim, Soyeon Kim, Chaeyoung Oh, Jaeyoon Kim, Hyemi Jo, Hyopil Shin",
       venue: "arXiv", year: 2023,
@@ -381,8 +410,15 @@ const DATA = {
   $("#name").textContent = DATA.name;
   $("#role").innerHTML = DATA.role;
   $("#bio").innerHTML = DATA.bio.map((p) => `<p>${p}</p>`).join("");
+  const ICONS = {
+    scholar: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>`,
+    huggingface: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="10.5" r="8"/><path d="M8.6 12.6a3.9 3.9 0 0 0 6.8 0"/><circle cx="9" cy="8.8" r="1.1" fill="currentColor" stroke="none"/><circle cx="15" cy="8.8" r="1.1" fill="currentColor" stroke="none"/><ellipse cx="6" cy="18.2" rx="3" ry="2.1" transform="rotate(-35 6 18.2)" fill="currentColor" stroke="none"/><ellipse cx="18" cy="18.2" rx="3" ry="2.1" transform="rotate(35 18 18.2)" fill="currentColor" stroke="none"/></svg>`,
+    linkedin: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>`,
+    github: `<svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>`,
+    email: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>`
+  };
   $("#links").innerHTML = DATA.links.map((l) =>
-    `<a class="pill" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}<span class="arr">↗</span></a>`
+    `<a class="icon-link" href="${esc(l.url)}" aria-label="${esc(l.label)}" title="${esc(l.label)}" target="_blank" rel="noopener">${ICONS[l.icon] || esc(l.label)}</a>`
   ).join("");
   const initials = DATA.name.split(/\s+/).map((w) => w[0]).slice(0, 2).join("");
   const ph = $("#photo");
@@ -435,7 +471,7 @@ const DATA = {
     return `<li class="pub">
       <div class="venue">${esc(p.venue)}</div>
       <div>
-        <div class="ptitle">${title}${p.award ? `<span class="award">${esc(p.award)}</span>` : ""}</div>
+        <div class="ptitle">${title}${p.award ? `<span class="award">${esc(p.award)}</span>` : ""}${p.status ? `<span class="status">${esc(p.status)}</span>` : ""}</div>
         <div class="authors">${authors}</div>
         <div class="prow"><div class="plinks">${links}</div><div class="kws">${kws}</div></div>
       </div>
@@ -449,7 +485,7 @@ const DATA = {
     ).join("") || `<li class="empty">No papers match this keyword.</li>`;
     $("#filter").innerHTML = filter
       ? `<span>${list.length} of ${DATA.papers.length} · <b>${esc(filter.value)}</b></span><button class="clear" id="clear">Clear ✕</button>`
-      : `<span>${DATA.papers.length} papers</span>`;
+      : `<span>${DATA.papers.length} papers · ${DATA.papers.filter((p) => p.authors.startsWith(DATA.me)).length} first-author</span>`;
     const c = $("#clear");
     if (c) c.addEventListener("click", () => setFilter(null));
   }
